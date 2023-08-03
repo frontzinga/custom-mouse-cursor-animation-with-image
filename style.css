@@ -1,0 +1,141 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: none;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    font-size: 16px;
+    line-height: 1.3;
+    color: white;
+    background-color: #555;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Jost', sans-serif;
+}
+
+main {
+    margin: auto;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+header {
+    padding: 2rem;
+    margin: 0 auto;
+}
+
+header h1 {
+    font-size: 3rem;
+}
+
+footer {
+    display: flex;
+    margin: auto auto 0;
+    padding: 1rem;
+}
+
+button {
+    display: inline-flex;
+    height: 3.5rem;
+    font-weight: 700;
+    padding: 1rem 2rem;
+    background-color: rgba(0,0,0,0.7);
+    outline: none;
+    color: white;
+    border: none;
+    border-radius: 2rem;
+    font-size: 1.25rem;
+    align-items: center;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+button:hover {
+    background-color: black;
+    transform: scale(1.1);
+}
+
+.character {
+    margin: 0 auto;
+    width: 320px;
+    overflow: hidden;
+}
+
+.select-group {
+    margin: 1rem 0 3rem;
+}
+
+label {
+    text-align: center;
+    font-size: 1.25rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+select {
+    display: block;
+    margin: 0 auto;
+    width: 300px;
+    outline: none;
+    height: 3.5rem;
+    border: 3px solid white;
+    background-color: rgba(0,0,0,0.2);
+    color: white;
+    font-size: 1.75rem;
+    font-weight: 700;
+    text-align: center;
+    border-radius: 2rem;
+    appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg fill='white' height='50' viewBox='0 0 25 25' width='50' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+    background-position-y: 50%;
+}
+
+.button-group {
+    display: flex;
+    gap: 3rem;
+}
+
+.cursor {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100px;
+    height: 100px;
+    pointer-events: none;
+}
+
+@keyframes shake {
+    0% {transform: rotate(0deg);}
+    25% {transform: rotate(5deg);}
+    50% {transform: rotate(0deg);}
+    75% {transform: rotate(-5deg);}
+    100% {transform: rotate(0deg);}
+}
+
+.shake-animation {
+    animation: shake 0.2s linear 3;
+}
+
+@keyframes hand {
+    0% {transform: translate(0, 0);}
+    25% {transform: translate(-10px, -10px);}
+    50% {transform: translate(0, 0);}
+    75% {transform: translate(10px, 10px);}
+    100% {transform: translate(0, 0);}
+}
+
+.hand-animation {
+    animation: hand 0.3s infinite;
+}
